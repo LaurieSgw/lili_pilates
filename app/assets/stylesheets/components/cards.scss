@@ -1,0 +1,112 @@
+.card-abo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid $pink;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  border-radius: 50px;
+
+  &:checked {
+    background: #FFFBAC;
+    border: 1px solid $super-pink;
+    box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+    border-radius: 50px;
+}
+}
+
+
+.card-course{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid $pink;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  border-radius: 4px;
+
+  &:checked{
+    background: #FFFBAC;
+    border: 1px solid $super-pink;
+    box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+
+  &:disabled{
+    background: #FFEEFB;
+    border: 1px solid $dark-gray;
+    box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+}
+
+
+.card-incoming-course {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid $pink;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.card-finished-course {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  background: $pink;
+  border: 1px solid $dark-gray;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.card-let-a-review {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #02005B;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+
+    &::content {
+    background: #FFFFFF;
+    border: 1px solid $super-pink;
+    border-radius: 10px;
+  }
+}
+
+.card-review {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid $dark-blue;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.card-profil {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid $super-pink;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.card-recap {
+  box-sizing: border-box;
+  background: $pink;
+  border: 1px solid $dark-blue;
+  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
