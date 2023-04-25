@@ -74,25 +74,28 @@
   border-radius: 4px;
 }
 
-.card-let-a-review {
-  box-sizing: border-box;
-  background: #FFFFFF;
-  border: 1px solid #02005B;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
-
-    &::content {
-    background: #FFFFFF;
-    border: 1px solid $super-pink;
-    border-radius: 10px;
-  }
-}
 
 .card-review {
   box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid $dark-blue;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 4px;
+
+
+  & h3 {
+    color: $super-pink;
+    font-weight: 300;
+    font-family: $body-font;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  & p {
+    padding-left: 10px
+  }
 }
 
 .card-profil {

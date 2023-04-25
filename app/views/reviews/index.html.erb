@@ -1,0 +1,12 @@
+<div class="container">
+<h3>Review index</h3>
+    <div class="row justify-content-around" >
+    <% @reviews.each do |review| %>
+        <div class="col-2 card-review m-3 ">
+          <h3> From <%=review.user.last_name %></h3>
+          <p><%= review.content %></p>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "Laisser un avis", new_review_path(@review), class: "button2 my-3" %>
+</div>
