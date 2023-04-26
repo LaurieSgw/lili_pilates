@@ -1,10 +1,10 @@
 <div class="container">
-<h3>Review index</h3>
     <div class="row justify-content-around" >
     <% @reviews.each do |review| %>
         <div class="col-2 card-review m-3 ">
           <h3> From <%=review.user.last_name %></h3>
           <p><%= review.content %></p>
+         <%= link_to "✖️", root_path, class: "text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer votre avis ?"}%>
       </div>
     <% end %>
   </div>

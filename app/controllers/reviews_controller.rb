@@ -17,14 +17,10 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-
-  end
-
   def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to reviews_path, status: :see_other
   end
 
   private
