@@ -1,2 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= asset_path 'Lisa-home.jpg' %>');">
+  <div class="container text-center ">
+    <div class="banner-text">
+      <h1>Prendre soin de soi grâce au Pilates </h1>
+      <h2> Renforcer son corps & trouver son équilibre </h2>
+    </div>
+    <div class="banner-space">
+      <%= link_to "Réserver un cours", "new_course_booking_path(@booking)", class:"button2" %>
+      <p>*La première séance est gratuite !</p>
+    </div>
+  </div>
+</div>
