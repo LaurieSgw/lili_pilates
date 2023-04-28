@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_25_151837) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_27_091842) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
     t.string "status"
     t.integer "total_price"
-    t.string "subscription_type"
     t.bigint "user_id", null: false
     t.bigint "course_id", null: false
     t.datetime "created_at", null: false
@@ -27,11 +26,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_151837) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.date "date"
+    t.datetime "date", precision: nil
     t.integer "available_places"
     t.boolean "trial_course"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "subscription_type"
   end
 
   create_table "reviews", force: :cascade do |t|
