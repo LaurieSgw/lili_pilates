@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.user = current_user
     if @review.save
-      redirect_to reviews_path
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,6 +26,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:content, :date)
   end
 end

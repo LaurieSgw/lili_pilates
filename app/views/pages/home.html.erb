@@ -10,3 +10,42 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <div class=" col-6 my-3 text-end card-space">
+    <h1>Qui suis-je ? </h1>
+    <h3 >Rémy et Mélanie ont trente ans et vivent dans le même quartier à Paris. Elle multiplie les rendez-vous ratés sur les réseaux sociaux pendant qu'il peine à faire une rencontre. Tous les deux victimes de cette solitude des grandes villes, à l’époque hyper connectée où l’on pense pourtant que se rencontrer devrait être plus simple… Deux individus, deux parcours. Sans le savoir, ils empruntent deux routes qui les mèneront dans une même direction… celle d’une histoire amour ?</h3>
+  </div>
+  <div class="d-flex justify-content-end">
+    <div class=" col-6 my-3 text-start card-space">
+      <h1>Qu'est-ce que je propose ? </h1>
+      <h3 >Rémy et Mélanie ont trente ans et vivent dans le même quartier à Paris. Elle multiplie les rendez-vous ratés sur les réseaux sociaux pendant qu'il peine à faire une rencontre. Tous les deux victimes de cette solitude des grandes villes, à l’époque hyper connectée où l’on pense pourtant que se rencontrer devrait être plus simple… Deux individus, deux parcours. Sans le savoir, ils empruntent deux routes qui les mèneront dans une même direction… celle d’une histoire amour ?</h3>
+    </div >
+  </div>
+
+  <div class="my-3 text-center card-space">
+    <h1>En savoir plus sur l'histoire du Pilates </h1>
+    <h3>Rémy et Mélanie ont trente ans et vivent dans le même quartier à Paris. Elle multiplie les rendez-vous ratés sur les réseaux sociaux pendant qu'il peine à faire une rencontre. Tous les deux victimes de cette solitude des grandes villes, à l’époque hyper connectée où l’on pense pourtant que se rencontrer devrait être plus simple… Deux individus, deux parcours. Sans le savoir, ils empruntent deux routes qui les mèneront dans une même direction… celle d’une histoire amour ?</h3>
+  </div>
+    <div class="my-5 text-center">
+      <%= link_to "Réserver un cours", courses_path, class:"button2" %>
+      <p class=" my-3">*La première séance est gratuite !</p>
+    </div>
+  <div class="my-5 card-space">
+    <h2 class="text-center">Vos avis</h2>
+      <div class="row my-3">
+          <% @reviews.each do |review| %>
+        <div class="card-review m-3 col-2">
+          <div class="d-flex justify-content-between">
+              <h3><%= review.user.last_name.capitalize %> <%= review.user.first_name %></h3>
+              <h3><%= review.date %></h3>
+          </div>
+            <p class="text-truncate">"<%= review.content %>"</p>
+        </div>
+        <% end %>
+      </div>
+  <div class="text-center mb-5">
+    <%= link_to "Laisser un avis", new_review_path(@review) %>
+  </div>
+  </div>
+</div>
+<div class="footer"></div>
