@@ -1,5 +1,4 @@
 .card-abo {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,48 +7,43 @@
   gap: 10px;
   background: #FFFFFF;
   border: 1px solid $pink;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  box-shadow: $dark-blue(0, 0, 0, 0.25);
   border-radius: 50px;
 
   &:checked {
     background: #FFFBAC;
     border: 1px solid $super-pink;
-    box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+    box-shadow: $dark-blue(0, 0, 0, 0.25);
     border-radius: 50px;
 }
 }
 
 
-.card-course{
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.card-course {
   padding: 10px;
-  gap: 10px;
-  background: #FFFFFF;
-  border: 1px solid $pink;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  background: $pink;
+  border: 1px solid $super-pink;
+  box-shadow:  $dark-blue(0, 0, 0, 0.25);
   border-radius: 4px;
 
   &:checked{
     background: #FFFBAC;
     border: 1px solid $super-pink;
-    box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+    box-shadow:  $dark-blue(0, 0, 0, 0.25);
     border-radius: 4px;
   }
 
   &:disabled{
     background: #FFEEFB;
     border: 1px solid $dark-gray;
-    box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+    box-shadow:  $dark-blue(0, 0, 0, 0.25);
     border-radius: 4px;
   }
-}
+  }
+DD
 
 
 .card-incoming-course {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,12 +51,11 @@
   gap: 10px;
   background: #FFFFFF;
   border: 1px solid $pink;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  box-shadow:  $dark-blue(0, 0, 0, 0.25);
   border-radius: 4px;
 }
 
 .card-finished-course {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -70,17 +63,17 @@
   gap: 10px;
   background: $pink;
   border: 1px solid $dark-gray;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  box-shadow:  $dark-blue(0, 0, 0, 0.25);
   border-radius: 4px;
 }
 
 
 .card-review {
-  box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid $dark-blue;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow:  rgba(0,0,0,0.2);
   border-radius: 4px;
+
 
 
   & h3 {
@@ -89,27 +82,26 @@
     font-family: $body-font;
     font-size: 16px;
     text-transform: uppercase;
-    padding-left: 10px;
     padding-top: 10px;
   }
 
-  & p {
-    padding-left: 10px
-  }
 }
 
 .card-profil {
-  box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid $super-pink;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.25);
+  box-shadow:  $dark-blue(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 
 .card-recap {
-  box-sizing: border-box;
   background: $pink;
   border: 1px solid $dark-blue;
-  box-shadow: 2px 2px 4px $dark-blue(0, 0, 0, 0.15);
+  box-shadow:   $dark-blue(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+
+.card-space {
+  padding-top: 5%;
 }
