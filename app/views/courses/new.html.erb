@@ -1,2 +1,12 @@
-<h1>Courses#new</h1>
-<p>Find me in app/views/courses/new.html.erb</p>
+<div class="container my-3">
+  <h1 class="text-center">Espace administrateur </h1>
+  <h2>Créer des nouveaux cours</h2>
+    <div>
+      <%= simple_form_for @course do |f| %>
+      <%= f.input :date, order: [:day, :month, :year], type: "datetime-local", fr:  %>
+      <%= f.input :available_places, collection: 1..6,
+                  label: "Nombre de places disponibles" %>
+      <%= f.submit "Rendre visible ce cours", class: "button2" %>
+      <% end %>
+    </div>
+ </div>

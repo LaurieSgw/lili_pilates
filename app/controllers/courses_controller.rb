@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_course, only: %i[new create destroy]
+  before_action :set_course, only: %i[destroy]
 
   def index
     @courses = Course.all
@@ -12,11 +12,15 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
-    @course.save
-    redirect_to courses_path
+    if @course.save
+      redirect_to courses_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    raise
     @course.destroy
     redirect_to courses_path, status: :see_other
   end

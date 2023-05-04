@@ -13,8 +13,20 @@
   </div>
   <div>
     <h2>ETAPE 2 : SELECTIONNER UNE (OU plusieurs) date(s)</h2>
+    <div class="row">
+      <% @courses.each do |course| %>
+        <div class="col-2 card-course m-2 ">
+          <h3><%= course.date.strftime(" %A %d %B à %kH%M") %> </h3>
+          <p><%= course.available_places %> places disponibles</p>
+          <%= link_to "✖️", courses_path, class: "text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer votre avis ?"}%>
+      </div>
+      <% end %>
+    </div>
+
     <p>Je souhaite réaliser une séance d’esssai gratuite.</p>
   </div>
+
+  <%# <%= render "courses/form-selection" %> %>
 
 
 
