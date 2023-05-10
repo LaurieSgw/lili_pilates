@@ -9,6 +9,7 @@ puts "Cleaning db"
 Course.destroy_all
 User.destroy_all
 Review.destroy_all
+Subscription.destroy_all
 
 puts "Creating users"
 
@@ -49,38 +50,72 @@ end
 
 puts "Reviews ok"
 
+
+subscription = Subscription.new(
+  sub_type: "Séance d'essai gratuite",
+  price: 0
+)
+subscription.save!
+
+puts "Create subscriptions"
+subscription = Subscription.new(
+  sub_type: "Réserver une séance",
+  price: 15
+)
+subscription.save!
+
+subscription = Subscription.new(
+  sub_type: "Abonnement 10 séances",
+  price: 120
+)
+subscription.save!
+
+subscription = Subscription.new(
+  sub_type: "Abonnement 20 séances",
+  price: 240
+)
+subscription.save!
+
+
+puts "Subscriptions ok"
+
 puts "Creating courses"
 course = Course.new(
   date: Time.now,
   available_places: 6,
-  trial_course: "No"
+  trial_course: "No",
+  subscription_id: Subscription.all.sample.id
 )
 course.save!
 
 course = Course.new(
   date: Time.now,
   available_places: 6,
-  trial_course: "No"
+  trial_course: "No",
+  subscription_id: Subscription.all.sample.id
 )
 course.save!
 
 course = Course.new(
   date: Time.now,
   available_places: 5,
-  trial_course: "No"
+  trial_course: "No",
+  subscription_id: Subscription.all.sample.id
 )
 course.save!
 
 course = Course.new(
   date: Time.now,
   available_places: 3,
-  trial_course: "Yes"
+  trial_course: "Yes",
+  subscription_id: Subscription.all.sample.id,
 )
 course.save!
 course = Course.new(
   date: Time.now,
   available_places: 6,
-  trial_course: "No"
+  trial_course: "No",
+  subscription_id: Subscription.all.sample.id
 )
 course.save!
 
