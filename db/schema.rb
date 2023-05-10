@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_02_154755) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_10_141418) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,7 +31,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_154755) do
     t.boolean "trial_course"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "subscription_type"
+    t.bigint "subscription_id"
+    t.index ["subscription_id"], name: "index_courses_on_subscription_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -41,6 +42,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_154755) do
     t.datetime "updated_at", null: false
     t.date "date"
     t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "type"
+    t.integer "price"
   end
 
   create_table "users", force: :cascade do |t|
