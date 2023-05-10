@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @subscription.booking = @subscription
     @course.booking = @course
     @booking.user = current_user
     @booking.save
