@@ -19,12 +19,6 @@ class CoursesController < ApplicationController
     end
   end
 
-  def destroy
-    raise
-    @course.destroy
-    redirect_to courses_path, status: :see_other
-  end
-
   private
 
   def course_params
