@@ -1,12 +1,20 @@
 <div class="container">
+  <h2 class="text-center my-3 ">Vos avis (<%= @reviews.count %>)</h2>
     <div class="row justify-content-around" >
-    <% @reviews.each do |review| %>
-        <div class="col-2 card-review m-3 ">
-          <h3> From <%=review.user.last_name %></h3>
+     <% @reviews.each do |review| %>
+        <div class="col-3 card-review m-3 ">
+         <div class="d-flex justify-content-between">
+            <h3><%= review.user.last_name.capitalize %> <%= review.user.first_name %></h3>
+            <h3><%= review.date %></h3>
+          </div>
           <p><%= review.content %></p>
-         <%= link_to "✖️", root_path, class: "text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "Voulez-vous vraiment supprimer votre avis ?"}%>
-      </div>
-    <% end %>
+        </div>
+      <% end %>
+    </div>
+
+  <div class="text-center my-5">
+    <%= link_to "Laisser un avis", new_review_path(@review), class: "button2" %>
   </div>
-  <%= link_to "Laisser un avis", new_review_path(@review), class: "button2 my-3" %>
 </div>
+
+<div class="footer"></div>

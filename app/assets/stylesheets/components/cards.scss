@@ -68,11 +68,24 @@ DD
 }
 
 
-.card-review {
+.card-border-review {
   background: #FFFFFF;
   border: 1px solid $dark-blue;
   box-shadow:  rgba(0,0,0,0.2);
   border-radius: 4px;
+  height: 300px;
+  width: 100%;
+
+}
+
+.card-review {
+  background: #FFFFFF;
+  border: 1px solid $super-pink;
+  box-shadow:  rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
 
 
 
@@ -85,7 +98,15 @@ DD
     padding-top: 10px;
   }
 
+  & p {
+    text-align: justify;
+    font-size: 14px;
+  }
+
 }
+
+
+
 
 .card-profil {
   background: #FFFFFF;
