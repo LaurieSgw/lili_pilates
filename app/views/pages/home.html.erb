@@ -32,18 +32,24 @@
     <p class=" my-3">*La première séance est gratuite !</p>
   </div>
 
-  <div class="my-5 card-space">
-    <h2 class="text-center my-3 ">Vos avis (<%= @reviews.count %>)</h2>
-    <div>
-      <%= render "pages/carroussel", home: @home %>
-    </div>
-    <div class="mt-3 mb-5 row  ">
-      <div class="text-end col-6"> <%= link_to "Tous les avis", reviews_path %> | <%= link_to "Laisser un avis", new_review_path(@review) %></div>
-        <div class="text-first col-6">
-          <%= link_to "Haut de page", root_path %>
-        </div>
-      </div>
-  </div>
 </div>
+  <div class="text-end my-3 container ">
+   <%= link_to "", root_path, class: "fa-solid fa-angles-up text-decoration-none" %>
+  </div>
+  <div class=" card-space row" >
+    <div class="col-6 banner-bottom" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= asset_path 'Lisa-home-bottom.jpg' %>');" >
+    </div>
+    <div class="col-6">
+      <h2 class="text-center my-3 ">Vos avis (<%= @reviews.count %>)</h2>
+      <div>
+        <%= render "pages/carroussel", home: @home %>
+      </div>
+      <div class="mt-3 mb-5 justify-content-center d-flex ">
+        <span><%= link_to "Tous les avis", reviews_path %> </span>  |  <span><%= link_to "Laisser un avis", new_review_path(@review) %></span>
+      </div>
+    </div>
+  </div>
 
+
+</div>
 <div class="footer"></div>
