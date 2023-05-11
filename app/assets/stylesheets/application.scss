@@ -54,3 +54,9 @@ a{
 .background-color {
   background:whitesmoke;
 }
+
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
