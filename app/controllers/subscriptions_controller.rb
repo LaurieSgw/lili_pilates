@@ -5,6 +5,12 @@ class SubscriptionsController < ApplicationController
     @subscriptions = Subscription.all
   end
 
+  def show
+    @subscriptions = Subscription.all
+    @subscription = Subscription.find(params[:id])
+    @booking = Booking.new
+  end
+
   def new
     @subscription = Subscription.new
   end
