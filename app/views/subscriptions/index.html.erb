@@ -1,15 +1,14 @@
 <div class="container my-3">
   <h1 class="text-center">Réserver un cours</h1>
-  <h3 class="my-3 text-center">Les cours sont donnés en présentiel à l’adresse suivante : 48 CHEMIN DE ROUFFIAC 31200 ROUFFIAC et durent 50 minutes.</h3>
+  <h3 class="my-3 text-center">Les cours sont donnés en présentiel à l’adresse suivante : <strong>48 CHEMIN DE ROUFFIAC 31200 ROUFFIAC </strong>et durent <strong>50 minutes</strong>. </h3>
   <div>
     <h2>ETAPE 1 : SELECTIONNER VOTRE TYPE D’ABONNEMENT</h2>
     <p>Si vous souhaitez essayer le pilates, <strong>la première séance est gratuite.</strong></p>
-    <div class="d-flex justify-content-around row">
+    <div class="align-self-center">
       <% @subscriptions.each do |subscription|  %>
-      <div class=" col-2 card-abo">
-        <h3><%= subscription.sub_type %></h3>
-        <h3><%= subscription.price %>€</h3>
-        <p type="checkbox"><%= link_to "Sélectionner", courses_path%></p>
+      <div class=" my-4 col-6 card-abo">
+        <h3> <strong><%= subscription.sub_type %></strong> - <%= subscription.price %>€</h3>
+        <p><%= link_to "Choisir", subscription_path(subscription)%></p>
       </div>
       <% end %>
     </div>

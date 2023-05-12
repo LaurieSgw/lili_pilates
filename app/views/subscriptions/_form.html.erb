@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for [@subscription, @booking] do |f| %>
+
+    <%= f.input :date,
+                collection: subscription.courses,
+                type: :radio%>
+    <%= f.submit 'Valider et payer', class: " button2 rounded-pill" %>
+  <% end %>
+</div>
