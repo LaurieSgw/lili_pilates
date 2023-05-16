@@ -1,4 +1,4 @@
 class Subscription < ApplicationRecord
   has_many :courses
-  has_many :bookings, through: :courses
+  has_many :bookings
 end

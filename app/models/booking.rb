@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  belongs_to :course
+  belongs_to :subscription
 
   validates :total_price, presence: true
 end

@@ -6,8 +6,8 @@ class SubscriptionsController < ApplicationController
   end
 
   def show
-    @subscriptions = Subscription.all
     @subscription = Subscription.find(params[:id])
+    @courses = Course.all
     @booking = Booking.new
   end
 

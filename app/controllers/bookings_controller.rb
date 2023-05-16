@@ -8,8 +8,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.save
-    redirect_to dashboard_path
+    if @booking.save
+      redirect_to dashboard_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
