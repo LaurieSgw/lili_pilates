@@ -1,9 +1,26 @@
-<div class="container">
-  <%= simple_form_for [@subscription, @booking] do |f| %>
 
-    <%= f.input :date,
-                collection: subscription.courses,
-                type: :radio%>
-    <%= f.submit 'Valider et payer', class: " button2 rounded-pill" %>
+ <% if @subscription.courses.any?%>
+ <div class="row  my-3">
+    <% @courses.sort_by(&:date).each do |course| %>
+      <div class="card-course">
+        <h3> <%= course.date.strftime("%A %d %B") %> à <%= course.date.time.strftime("%kh%M") %></h3>
+          <p class="my-1"> <%= course.available_places%> places disponibles !</p>
+          <div class="d-flex justify-content-center align-items-center">
+          <p class="m-2" >Choisir :</p>
+         <%= simple_form_for [@subscription, @booking] do |f| %>
+            <%= f.submit '',
+            type: :checkbox %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <div class="my-5 text-center">
+      <%= link_to "Confirmer",  new_subscription_booking_path(subscription), class: "button2" %>
+    </div>
+  </div>
+
+
+      <%= %>
+  <% else %>
+    <p>nop</p>
   <% end %>
-</div>
